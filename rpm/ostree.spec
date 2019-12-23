@@ -102,10 +102,6 @@ find %{buildroot} -name '*.la' -delete
 %{_bindir}/rofiles-fuse
 %{_datadir}/ostree
 %{_datadir}/bash-completion/completions/*
-%dir %{_prefix}/lib/dracut/modules.d/98ostree
-%{_prefix}/lib/systemd/system/ostree*.*
-%{_prefix}/lib/dracut/modules.d/98ostree/*
-%{_prefix}/lib/systemd/system-generators/ostree-system-generator
 %exclude %{_sysconfdir}/grub.d/*ostree
 %exclude %{_libexecdir}/libostree/grub2*
 %exclude %{_libexecdir}/libostree/ostree-trivial-httpd
