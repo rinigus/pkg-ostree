@@ -119,8 +119,6 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/lib*.so
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
-%dir %{_datadir}/gtk-doc/html/ostree
-%{_datadir}/gtk-doc/html/ostree
 %{_datadir}/gir-1.0/OSTree-1.0.gir
 
 %if %{with tests}
@@ -567,11 +565,11 @@ find %{buildroot} -name '*.la' -delete
 * Mon Sep 09 2013 Colin Walters <walters@verbum.org> - 2013.6-1
 - New upstream release
 
-* Sat Aug 25 2013 Colin Walters <walters@verbum.org> - 2013.5-3
+* Sun Aug 25 2013 Colin Walters <walters@verbum.org> - 2013.5-3
 - And actually while we are here, drop all the embedded dependency
   goop from this spec file; it may live on in the EPEL branch.
 
-* Sat Aug 25 2013 Colin Walters <walters@verbum.org> - 2013.5-2
+* Sun Aug 25 2013 Colin Walters <walters@verbum.org> - 2013.5-2
 - Drop requirement on linux-user-chroot
   We now require triggers to be processed on the build server
   by default, so ostree does not runtime-depend on linux-user-chroot.
