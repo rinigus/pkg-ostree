@@ -86,10 +86,10 @@ env NOCONFIGURE=1 ./autogen.sh
 find %{buildroot} -name '*.la' -delete
 
 # Needed to enable the service at compose time currently
-%post -p /sbin/ldconfig
+%post -n ostree -p /sbin/ldconfig
 %systemd_post ostree-remount.service
 
-%postun -p /sbin/ldconfig
+%postun -n ostree -p /sbin/ldconfig
 %systemd_preun ostree-remount.service
 
 %files
