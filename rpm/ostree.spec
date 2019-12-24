@@ -33,7 +33,6 @@ BuildRequires: bison
 
 # Runtime requirements
 Requires: /usr/bin/gpgv2
-Requires: systemd-units
 Requires: %{name}-libs%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 
 %description
