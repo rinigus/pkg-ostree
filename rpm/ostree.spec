@@ -21,7 +21,7 @@ BuildRequires: libattr-devel
 # Extras
 BuildRequires: pkgconfig(libarchive)
 BuildRequires: pkgconfig(liblzma)
-BuildRequires: pkgconfig(libselinux)
+#BuildRequires: pkgconfig(libselinux)
 BuildRequires: pkgconfig(mount)
 BuildRequires: pkgconfig(fuse)
 BuildRequires: pkgconfig(e2p)
@@ -71,7 +71,7 @@ the functionality of the installed %{name} package.
 env NOCONFIGURE=1 ./autogen.sh
 %configure --disable-silent-rules \
            --disable-gtk-doc \
-           --with-selinux \
+           --disable-selinux \
            --with-curl \
            --with-openssl \
            %{?with_tests:--enable-installed-tests=exclusive} \
