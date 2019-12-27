@@ -71,7 +71,7 @@ the functionality of the installed %{name} package.
 env NOCONFIGURE=1 ./autogen.sh
 %configure --disable-silent-rules \
            --disable-gtk-doc \
-           --disable-selinux \
+           --without-selinux \
            --with-curl \
            --with-openssl \
            %{?with_tests:--enable-installed-tests=exclusive} \
