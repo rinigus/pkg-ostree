@@ -74,7 +74,6 @@ env NOCONFIGURE=1 ./autogen.sh
            --without-selinux \
            --with-curl \
            --with-openssl \
-           %{?with_tests:--enable-installed-tests=exclusive} \
            --without-dracut \
            --without-mkinitcpio \
            --disable-man
