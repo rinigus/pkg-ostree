@@ -125,8 +125,8 @@ find %{buildroot} -name '*.la' -delete
 
 %if %{with tests}
 %files tests
-%{_libexecdir}/installed-tests
-%{_datadir}/installed-tests
+# %{_libexecdir}/installed-tests
+# %{_datadir}/installed-tests
 %{_libexecdir}/libostree/ostree-trivial-httpd
 %endif
 
