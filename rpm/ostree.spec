@@ -2,7 +2,7 @@
 
 Summary: Tool for managing bootable, immutable filesystem trees
 Name: ostree
-Version: 2019.6
+Version: 2020.08
 Release: 2%{?dist}
 Source0: ostree-%{version}.tar.xz
 License: LGPLv2+
@@ -74,7 +74,6 @@ env NOCONFIGURE=1 ./autogen.sh
            --without-selinux \
            --with-curl \
            --with-openssl \
-           %{?with_tests:--enable-installed-tests=exclusive} \
            --without-dracut \
            --without-mkinitcpio \
            --disable-man
@@ -103,8 +102,8 @@ find %{buildroot} -name '*.la' -delete
 %{_bindir}/rofiles-fuse
 %{_datadir}/ostree
 %{_datadir}/bash-completion/completions/*
-/lib/systemd/system/ostree*.*
-/lib/systemd/system-generators/ostree-system-generator
+%{_prefix}/lib/systemd/system/ostree*.*
+%{_prefix}/lib/systemd/system-generators/ostree-system-generator
 %exclude %{_sysconfdir}/grub.d/*ostree
 %exclude %{_libexecdir}/libostree/grub2*
 %exclude %{_libexecdir}/libostree/ostree-trivial-httpd
@@ -126,8 +125,8 @@ find %{buildroot} -name '*.la' -delete
 
 %if %{with tests}
 %files tests
-%{_libexecdir}/installed-tests
-%{_datadir}/installed-tests
+# %{_libexecdir}/installed-tests
+# %{_datadir}/installed-tests
 %{_libexecdir}/libostree/ostree-trivial-httpd
 %endif
 
