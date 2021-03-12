@@ -2,7 +2,7 @@
 
 Summary: Tool for managing bootable, immutable filesystem trees
 Name: ostree
-Version: 2020.08
+Version: 2020.8
 Release: 2%{?dist}
 Source0: ostree-%{version}.tar.xz
 License: LGPLv2+
